@@ -1,0 +1,10 @@
+.hero {
+    @include mq (tablet) {
+        background-color: purple;
+    }
+
+    height: 400px;
+
+
+    @include section-padding (20px, 50px, 100px)
+}
