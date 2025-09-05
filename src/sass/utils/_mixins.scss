@@ -18,12 +18,12 @@
 }
 
 @mixin section-padding($pmob, $ptab, $pdesk) {
-    padding-top: $pmob;
-    @include mq(tablet) {
-        padding-top: $ptab;
-    }
+  padding-top: $pmob;
+  @include mq(tablet) {
+    padding-top: $ptab;
+  }
 
-    @include mq(desktop) {
-        padding-top: $pdesk;
-    }
+  @include mq(desktop) {
+    padding-top: $pdesk;
+  }
 }
