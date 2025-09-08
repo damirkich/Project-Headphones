@@ -68,7 +68,7 @@
       width: 380px;
     }
   }
-  &__image {
+  &__image + &__wraper {
     position: absolute;
     margin: 0 auto;
     width: 280px;
