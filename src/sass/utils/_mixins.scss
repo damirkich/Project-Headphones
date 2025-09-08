@@ -27,3 +27,9 @@
         padding-top: $pdesk;
     }
 }
+
+@mixin font-style($fw, $fs) {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+}
