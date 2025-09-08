@@ -1,8 +1,5 @@
 .review {
-  display: flex;
-  justify-content: center;
   @media (min-width: 1024px) {
-    justify-content: flex-start;
   }
 
   .container {
@@ -40,10 +37,18 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-
+    margin-left: 20px;
+    margin-right: 20px;
+    @media (min-width: 768px) {
+      margin-left: 60px;
+      margin-right: 60px;
+    }
     @media (min-width: 1024px) {
+      margin: 0;
+      padding-right: 112px;
       display: flex;
       flex-direction: row;
+      justify-content: left;
       gap: 150px;
     }
   }
@@ -53,9 +58,16 @@
     padding-top: 56.22%;
     margin-bottom: 32px;
     margin-top: 32px;
-    flex-shrink: 0;
 
     @media (min-width: 1024px) {
+      padding: 0;
+      width: 700px;
+      height: 393px;
+    }
+    @media (min-width: 1280px) {
+      padding: 0;
+      width: 920px;
+      height: 517px;
     }
   }
 
@@ -69,7 +81,6 @@
     @media (min-width: 1024px) {
     }
   }
-
   &__link {
     font-family: $font-family;
     font-weight: 600;
@@ -86,7 +97,6 @@
     font-size: 14px;
     line-height: 125%;
     color: rgba(255, 255, 255, 0.8);
-    max-width: 258px;
 
     @media (min-width: 768px) {
       line-height: 145%;
@@ -104,9 +114,6 @@
 
   &__slide {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     &--secondly {
       display: none;
