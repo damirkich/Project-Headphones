@@ -38,8 +38,7 @@
     color: #e7e7e7;
 
     @media (min-width: 1024px) {
-      font-size: 28px;
-      line-height: 125%;
+      @include text($Fsize: 28px, $LineH: 125%);
     }
   }
   &__line {
@@ -69,14 +68,11 @@
     max-width: 200px;
 
     @media (min-width: 768px) {
-      font-size: 16px;
-      line-height: 145%;
+      @include text($Fsize: 16px, $LineH: 145%);
       max-width: 450px;
     }
     @media (min-width: 1024px) {
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 125%;
+      @include text($Fweight: 600, $Fsize: 28px, $LineH: 125%);
       color: $main-color;
       max-width: 800px;
     }
