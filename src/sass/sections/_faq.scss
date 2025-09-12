@@ -36,7 +36,7 @@
 
   &__number {
     @include text($second-family, 400, 20px, 70%);
-    color: #e7e7e7;
+    color: $main-color;
 
     @media (min-width: 1024px) {
       @include text($Fsize: 28px, $LineH: 125%);
@@ -89,7 +89,7 @@
     border-radius: 50%;
 
     @include text($second-family, 400, 20px, 70%);
-    color: #e7e7e7;
+    color: $main-color;
     background-color: $icon-color;
     @media (min-width: 1024px) {
       font-size: 28px;
