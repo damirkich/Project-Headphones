@@ -27,3 +27,26 @@
     padding-top: $pdesk;
   }
 }
+
+@mixin title(
+  $Ffamily: $font-family,
+  $Fweight: 600,
+  $Fsize: 24px,
+  $LineH: 120%,
+  $LetS: 0.02em,
+  $Ttrans: uppercase
+) {
+  font-family: $Ffamily;
+  font-weight: $Fweight;
+  font-size: $Fsize;
+  line-height: $LineH;
+  letter-spacing: $LetS;
+  text-transform: $Ttrans;
+}
+
+@mixin text($Ffamily: $font-family, $Fweight: 400, $Fsize: 14px, $LineH: 125%) {
+  font-family: $Ffamily;
+  font-weight: $Fweight;
+  font-size: $Fsize;
+  line-height: $LineH;
+}
