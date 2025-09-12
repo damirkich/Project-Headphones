@@ -1,5 +1,5 @@
 .design {
-  //  @include section-padding-general(28px, 28px, 48px);
+  @include section-padding(28px, 28px, 48px);
 
   padding-top: 52px;
 
@@ -7,7 +7,7 @@
     padding-top: 100px;
   }
 
-  @include mq(tablet) {
+  @include mq(desktop) {
     padding-top: 170px;
   }
 
@@ -152,13 +152,12 @@
     margin: 0;
     gap: 16px;
     margin-bottom: 16px;
-
   }
 
   &__bulletlist {
-     @include mq(desktop) {
-    display: flex;
-    gap: 220px;
+    @include mq(desktop) {
+      display: flex;
+      gap: 220px;
     }
   }
 
@@ -182,7 +181,110 @@
 .capable {
   .container {
     @include mq(desktop) {
-    padding: 0;
+      padding: 0;
     }
+  }
+}
+
+.footer {
+  padding-top: 72px;
+
+  @include mq(tablet) {
+    padding-top: 100px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 170px;
+  }
+
+  .container {
+    @include mq(tablet) {
+      display: flex;
+      padding: 0 0 0 40px;
+    }
+
+    @include mq(desktop) {
+      padding: 0;
+    }
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 125%;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+
+    @include mq(desktop) {
+      font-size: 16px;
+    }
+
+    &--address {
+      font-family: var(--third-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+
+      @include mq(tablet) {
+        position: relative;
+        right: -145px;
+        bottom: -85px;
+      }
+
+      @include mq(desktop) {
+        position:static ;
+        margin-left: 185px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    @include mq(desktop) {
+        gap: 50px;
+        flex-direction: row;
+     }
+
+    &--two {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      align-items: flex-end;
+
+      @include mq(tablet) {
+        align-items: flex-start;
+      }
+
+      @include mq(desktop) {
+        gap: 50px;
+        flex-direction: row;
+     }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 52px;
+
+    @include mq(tablet) {
+      gap: 139px;
+      margin: 0;
+    }
+
+    @include mq(desktop) {
+        gap: 50px;
+     }
   }
 }
