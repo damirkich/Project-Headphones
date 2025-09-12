@@ -90,13 +90,10 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    font-family: $second-family;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 70%;
-    color: #e7e7e7;
-    background-color: rgba(255, 255, 255, 0.1);
 
+    @include text($second-family, 400, 20px, 70%);
+    color: #e7e7e7;
+    background-color: $icon-color;
     @media (min-width: 1024px) {
       font-size: 28px;
       width: 42px;
