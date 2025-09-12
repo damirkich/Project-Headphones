@@ -1,4 +1,5 @@
 .faq {
+  @include section-padding(0, 100px, 170px);
   .container {
     width: auto;
   }
