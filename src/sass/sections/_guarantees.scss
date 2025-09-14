@@ -1,0 +1,130 @@
+.guarantees {
+    margin: 0;
+    padding-top: 52px;
+    background: #191919;
+    overflow: hidden;
+
+    &__title {
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #e7e7e7;
+        padding-bottom: 32px;
+        margin: 0 auto;
+
+        @media (min-width: 1024px) {
+            font-size: 37px;
+        }
+
+        @media (min-width: 1440px) {
+            font-size: 54px;
+        }
+    }
+
+    &__subtitle {
+        font-family: $font-family;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 125%;
+        color: #e7e7e7;
+        margin: 24px 0 16px 0;
+
+        @media (min-width: 1040px) {
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 125%;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0 auto;
+
+        @media (min-width: 1024px){
+            font-size: 17px;
+        }
+
+        @media (min-width: 1440px) {
+            :nth-child(1) {
+                width: 303px;
+            }
+
+            font-size: 20px;
+        }
+    }
+
+    &__content {
+        margin-bottom: 24px;
+
+        &:nth-child(2) {
+            margin-bottom: 32px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            border-radius: 100%;
+            width: 13px;
+            height: 13px;
+            background-color: #df3d3a;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    &__image {
+        flex-shrink: 0;
+
+        @media (min-width: 768px) {
+            width: 354px;
+            height: 442px;
+            position: relative;
+            left: calc(50% - 237px);
+        }
+
+        @media (min-width: 1024px) {
+            width: 550px;
+            height: 535px;
+            position: relative;
+            left: calc(50% - 155px);
+        }
+
+        @media (min-width: 1440px) {
+            width: 590px;
+            height: 565px;
+            position: relative;
+            left: calc(50% - 540px);
+        }
+    }
+
+    .container {
+        @media(min-width: 768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            align-items: center;
+        }
+    }
+
+    &__info {
+        @media (min-width: 1024px) {
+            margin-left: 150px;
+        }
+
+        @media (min-width: 1440px) {
+            margin-left: 0;
+            width: 405px;
+        }
+    }
+}

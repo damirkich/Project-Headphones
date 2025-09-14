@@ -1,18 +1,30 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+// .container {
+//     width: 240px;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     margin: 0 auto;
+
+//     @include mq(tablet) {
+//         width: 608px;
+
+//     }
+
+//     @include mq(desktop) {
+//         width: 1020px;
+//     }
+// }
+
 .container {
-    width: 240px;
-    padding-left: 20px;
-    padding-right: 20px;
     margin: 0 auto;
-
-    @include mq(tablet) {
-        width: 608px;
-
+    width: 280px;
+    @media(min-width: 768px){
+        width: 648px;
     }
 
-    @include mq(desktop) {
-        width: 1020px;
+    @media (min-width: 1440px){
+        width: 1042px;
     }
 }
 
@@ -24,9 +36,9 @@
         url('../fonts/Gilroy-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Gilroy';
     src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
         url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
@@ -34,4 +46,8 @@
         url('../fonts/Gilroy-Semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
-  }
+}
+
+ul {
+    list-style-type: none;
+}
