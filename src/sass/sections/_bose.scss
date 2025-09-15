@@ -1,59 +1,47 @@
 .bose {
-    @include section-padding(52px,100px,170px);
-    position: relative;
+  @include section-margin(52px, 100px, 170px);
+  position: relative;
+  display: flex;
+  justify-content: center;
   & .container {
-    margin: 0;
+    min-width: 280;
+    padding: 0;
+    margin: 0 20px;
+    height: 495px;
     @include mq(tablet) {
       display: flex;
       flex-direction: row;
+      min-width: 708;
       height: 297px;
-      padding-left: 60px;
+      margin-left: 60px;
       gap: 60px;
     }
     @include mq(desktop) {
-      padding-left: 190px;
+      margin-left: 190px;
+      min-width: 1250;
       height: 586px;
       gap: 170px;
     }
   }
   &__title {
-    @include font-style(600, 24px);
-    font-family: $font-family;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: $title-color;
-    padding-bottom: 32px;
-    margin: 0;
-    @include mq(tablet) {
-      font-size: 30px;
-    }
-    @include mq(desktop) {
-      font-size: 54px;
-    }
+    @include section-title(600, 24px, 30px, 54px);
   }
   &__subtitle {
-    @include font-style(600, 20px);
-    font-family: $font-family;
-    color: $title-color;
-    padding-bottom: 16px;
-    margin: 0;
+    @include section-subtitle;
     @include mq(desktop) {
-      font-size: 28px;
+      padding-bottom: 20px;
     }
   }
   &__desc {
-    @include font-style(400, 14px);
+    @include text-style(400, 14px, 16px, 20px);
     font-family: $font-family;
     color: rgba(255, 255, 255, 0.8);
     padding-bottom: 32px;
     margin: 0;
     @include mq(tablet) {
       width: 285px;
-      font-size: 16px;
-      line-height: 145%;
     }
     @include mq(desktop) {
-      font-size: 20px;
       width: 350px;
     }
   }
@@ -68,7 +56,8 @@
       width: 380px;
     }
   }
-  &__image + &__wraper {
+  &__image,
+  &__wraper {
     position: absolute;
     margin: 0 auto;
     width: 280px;
