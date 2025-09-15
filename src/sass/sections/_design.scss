@@ -216,6 +216,10 @@
     color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
 
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
     @include mq(desktop) {
       font-size: 16px;
     }
@@ -227,6 +231,10 @@
       color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
 
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
       @include mq(tablet) {
         position: relative;
         right: -145px;
@@ -234,7 +242,7 @@
       }
 
       @include mq(desktop) {
-        position:static ;
+        position: static;
         margin-left: 185px;
       }
     }
@@ -249,9 +257,9 @@
     padding: 0;
 
     @include mq(desktop) {
-        gap: 50px;
-        flex-direction: row;
-     }
+      gap: 50px;
+      flex-direction: row;
+    }
 
     &--two {
       display: flex;
@@ -269,7 +277,7 @@
       @include mq(desktop) {
         gap: 50px;
         flex-direction: row;
-     }
+      }
     }
   }
 
@@ -284,7 +292,7 @@
     }
 
     @include mq(desktop) {
-        gap: 50px;
-     }
+      gap: 50px;
+    }
   }
 }
