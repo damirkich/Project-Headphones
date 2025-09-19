@@ -14,11 +14,12 @@
     }
 
     @include mq(desktop) {
-      width: 100%;
+      width: 1440px;
       height: auto;
       position: absolute;
-      left: 0;
+      left: 50%;
       top: 0;
+      transform: translateX(-50%);
     }
   }
 }
@@ -92,6 +93,11 @@ a {
     letter-spacing: 0%;
     resize: none;
     padding-top: 32px;
+
+    &:focus {
+      border-bottom: 2px solid #df3d3a;
+      outline: none;
+    }
   }
 }
 
