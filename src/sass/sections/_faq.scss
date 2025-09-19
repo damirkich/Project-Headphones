@@ -34,6 +34,13 @@
     margin-top: 24px;
   }
 
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
   &__number {
     @include text($second-family, 400, 20px, 70%);
     color: $main-color;
@@ -44,9 +51,10 @@
   }
   &__line {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 16px;
+    z-index: 1000;
 
     &:after {
       content: '';
@@ -67,6 +75,7 @@
     @include text;
     color: $second-color;
     max-width: 200px;
+    margin: 0;
 
     @media (min-width: 768px) {
       @include text($Fsize: 16px, $LineH: 145%);
@@ -83,7 +92,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    min-width: 32px;
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -95,6 +104,40 @@
       font-size: 28px;
       width: 42px;
       height: 42px;
+    }
+  }
+
+  .accordion {
+    border: none;
+    border-bottom: 2px;
+    &-item {
+      border: none;
+      background-color: $bc-color;
+    }
+
+    &-button {
+      background-color: $bc-color;
+      color: $main-color;
+      width: 100%;
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::after {
+        display: none;
+        opacity: 0;
+      }
+    }
+
+    &-body {
+      @include text($second-family, 400, 20px, 145%);
+      color: $main-color;
+      background-color: $bc-color;
+      @media (min-width: 1024px) {
+        font-size: 28px;
+      }
+
+      color: $white;
     }
   }
 }
