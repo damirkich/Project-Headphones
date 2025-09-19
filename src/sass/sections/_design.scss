@@ -186,6 +186,8 @@
   }
 }
 
+
+
 .footer {
   padding-top: 72px;
 
@@ -209,10 +211,7 @@
   }
 
   &__link {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 125%;
+    @include base;
     color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
 
