@@ -1,0 +1,77 @@
+<section class="feedback">
+  <div class="container">
+    <picture>
+      <!-- <source
+      srcset="./images/headphones-desk.webp"
+      media="(min-width: 1024px)"
+    />
+    <source
+      srcset="./images/headphones-tab.webp"
+      media="(min-width: 768px)"
+    /> -->
+      <source
+        srcset="
+          ./images/feedback/Sitting-desktop.webp    1x,
+          ./images/feedback/Sitting-desktop@2x.webp 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        srcset="
+          ./images/feedback/Sitting-tablet.webp    1x,
+          ./images/feedback/Sitting-tablet@2x.webp 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/feedback/Human-Sitting.webp    1x,
+          ./images/feedback/Human-Sitting@2x.webp 2x
+        "
+        media="(min-width: 320px)"
+      />
+      <img
+        class="feedback__image"
+        src="./images/feedback/Human-Sitting.webp"
+        alt="Human sitting infront of a pc with our special headphones"
+        width="280"
+        height="235"
+      />
+    </picture>
+    <div class="feedback__content">
+      <div>
+        <h1 class="title">FEEDBACK</h1>
+        <p class="description">
+          We'll help you find the right headphones for you.
+        </p>
+      </div>
+      <form>
+        <input type="text" placeholder="Your name" class="text-box" />
+        <input type="email" placeholder="Your e-mail" class="text-box" />
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Send us a message"
+          class="text-box__big"
+        ></textarea>
+        <label for="policy" class="privacy-policy"
+          ><input
+            type="checkbox"
+            name="policy"
+            id="policy"
+            class="privacy-policy__checkbox"
+          />
+          I agree to the
+          <a
+            href="https://business.vic.gov.au/tools-and-templates/privacy-policy-template"
+            target="_blank"
+            >privacy policy</a
+          >
+        </label>
+        <button type="submit" class="send">
+          <p class="send__text">SEND</p>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
