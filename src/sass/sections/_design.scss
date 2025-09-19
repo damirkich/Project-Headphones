@@ -1,15 +1,5 @@
 .design {
-  //  @include section-padding-general(28px, 28px, 48px);
-
-  padding-top: 52px;
-
-  @include mq(tablet) {
-    padding-top: 100px;
-  }
-
-  @include mq(tablet) {
-    padding-top: 170px;
-  }
+  @include section-padding(52px, 100px, 170px);
 
   .container {
     @include mq(tablet) {
@@ -39,13 +29,8 @@
   }
 
   &__title {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 120%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #e7e7e7;
+    @include title;
+    color: $first-color;
     margin: 0 0 32px 0;
 
     @include mq(tablet) {
@@ -59,13 +44,8 @@
     }
 
     &--capable {
-      font-family: var(--font-family);
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 120%;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: #e7e7e7;
+      @include title;
+      color: $first-color;
       margin: 0 0 32px 0;
 
       @include mq(desktop) {
@@ -78,11 +58,8 @@
   }
 
   &__text {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 125%;
-    color: rgba(255, 255, 255, 0.8);
+    @include base;
+    color: $second-color;
     margin: 0;
 
     @include mq(tablet) {
@@ -117,11 +94,8 @@
   }
 
   &__subtitle {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 125%;
-    color: #e7e7e7;
+    @include subtitle;
+    color: $first-color;
     margin: 0 0 16px 0;
 
     @include mq(desktop) {
@@ -152,13 +126,12 @@
     margin: 0;
     gap: 16px;
     margin-bottom: 16px;
-
   }
 
   &__bulletlist {
-     @include mq(desktop) {
-    display: flex;
-    gap: 220px;
+    @include mq(desktop) {
+      display: flex;
+      gap: 220px;
     }
   }
 
@@ -175,14 +148,6 @@
         border-radius: 100%;
         background-color: #df3d3a;
       }
-    }
-  }
-}
-
-.capable {
-  .container {
-    @include mq(desktop) {
-    padding: 0;
     }
   }
 }
