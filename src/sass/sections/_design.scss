@@ -19,6 +19,7 @@
       padding: 0;
       gap: 150px;
       position: relative;
+      margin-left: 0;
     }
   }
 
@@ -150,4 +151,42 @@
       }
     }
   }
+
+
+
+
+
+
+
+
+
+
+/*
+
+ &__brtel {
+  display: inline;
+}
+
+&__brtabl,
+&__brdesk {
+  display: none;
+}
+
+@include mq(tablet) {
+  &__brtel {
+    display: none;
+  }
+  &__brtabl {
+    display: inline;
+  }
+}
+
+ @include mq(desktop) {
+  &__brtabl {
+    display: none;
+  }
+  &__brdesk {
+    display: inline;
+  }
+} */
 }

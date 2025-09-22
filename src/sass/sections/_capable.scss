@@ -39,7 +39,7 @@
   &__bulletlist {
     @include mq(desktop) {
       display: flex;
-      gap: 220px;
+      gap: 42px;
     }
   }
 
@@ -83,6 +83,12 @@
       @include title;
       color: $first-color;
       margin: 0 0 32px 0;
+
+      @include mq(tablet) {
+        br {
+          display: none;
+        }
+      }
 
       @include mq(desktop) {
         font-size: 54px;
