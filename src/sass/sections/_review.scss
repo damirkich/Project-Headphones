@@ -29,15 +29,18 @@
 
   &__card {
     display: flex;
-    justify-content: space-between;
+
     flex-direction: column;
     margin-left: 20px;
     margin-right: 20px;
+    min-height: 480px;
     @media (min-width: 768px) {
+      min-height: 707px;
       margin-left: 60px;
       margin-right: 60px;
     }
     @media (min-width: 1024px) {
+      min-height: 590px;
       margin: 0;
       padding-right: 112px;
       display: flex;
@@ -94,14 +97,50 @@
       max-width: 258px;
     }
   }
+
+  &__indicators {
+    @include text($Fsize: 20px);
+    color: $extra-color;
+    opacity: 0.2;
+    p {
+      display: flex;
+      gap: 20px;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
 }
 
 .carousel {
-  &__track {
+  &-indicators {
+    bottom: -32px;
+    max-width: 197px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-left: 20px;
+
+    @media (min-width: 768px) {
+      margin-left: 60px;
+    }
+    @media (min-width: 1024px) {
+      margin: 0;
+      position: absolute;
+      top: -195px;
+      left: calc(50% - 10px);
+      min-width: 153px;
+    }
+    & li {
+      text-indent: 0;
+      background-color: transparent;
+    }
   }
 
-  &__slide {
+  .slide {
     list-style: none;
+    position: relative;
 
     &--secondly {
       display: none;
