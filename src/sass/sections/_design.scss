@@ -1,0 +1,172 @@
+.design {
+  @include section-padding(52px, 100px, 170px);
+
+  .container {
+    @include mq(tablet) {
+      width: 708px;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 60px;
+      padding: 0;
+      position: relative;
+      left: -43px;
+    }
+
+    @include mq(desktop) {
+      width: 1250px;
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 0;
+      gap: 150px;
+      position: relative;
+      margin: 0 auto;
+      left: -141px;
+    }
+  }
+
+  &__content {
+    @include mq(desktop) {
+      width: 464px;
+    }
+  }
+
+  &__title {
+    @include title;
+    color: $first-color;
+    margin: 0 0 32px 0;
+
+    @include mq(tablet) {
+      font-size: 30px;
+      width: 294px;
+    }
+
+    @include mq(desktop) {
+      font-size: 54px;
+      width: 468px;
+    }
+
+    &--capable {
+      @include title;
+      color: $first-color;
+      margin: 0 0 32px 0;
+
+      @include mq(desktop) {
+        font-size: 54px;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include base;
+    color: $second-color;
+    margin: 0;
+
+    @include mq(tablet) {
+      font-size: 16px;
+      padding-right: 15px;
+    }
+
+    @include mq(desktop) {
+      font-size: 20px;
+      line-height: 145%;
+      width: 484px;
+      padding: 0;
+    }
+  }
+
+  &__brtel {
+    @include mq(tablet) {
+      display: none;
+    }
+
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+
+  &__brtab {
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
+
+  &__img {
+    width: 280px;
+    height: 293px;
+    margin-bottom: 52px;
+
+    @include mq(tablet) {
+      width: 354px;
+      height: 540px;
+      margin-bottom: 121px;
+    }
+
+    @include mq(desktop) {
+      width: 590px;
+      height: 616px;
+    }
+  }
+
+  &__subtitle {
+    @include subtitle;
+    color: $first-color;
+    margin: 0 0 16px 0;
+
+    @include mq(desktop) {
+      font-size: 28px;
+      width: 468px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0 0 32px 0;
+    gap: 24px;
+    padding: 0;
+
+    @include mq(tablet) {
+      width: 294px;
+      gap: 40px;
+    }
+  }
+
+  &__redlist {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__bulletlist {
+    @include mq(desktop) {
+      display: flex;
+      gap: 220px;
+    }
+  }
+
+  &__item {
+    &--ball {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      &::before {
+        display: inline-block;
+        content: '';
+        width: 13px;
+        height: 13px;
+        border-radius: 100%;
+        background-color: #df3d3a;
+      }
+    }
+  }
+}

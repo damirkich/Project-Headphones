@@ -17,20 +17,33 @@
 // }
 
 .container {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
-    width: 280px;
-    @media(min-width: 768px){
-        width: 648px;
+
+    @include mq(tablet) {
+    width: 648px;
+    padding-left: 40px;
+    padding-right: 40px;
     }
 
-    @media (min-width: 1440px){
-        width: 1042px;
+    @include mq(desktop) {
+    width: 1060px;
+    padding-left: 190px;
+    padding-right: 190px;
     }
 }
 
 body {
     background: $background-color;
 }
+
+body {
+    background: $background-color;
+}
+
+
 
 @font-face {
     font-family: 'Gilroy';

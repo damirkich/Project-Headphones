@@ -89,3 +89,26 @@
   padding-bottom: 16px;
   margin: 0;
 }
+
+@mixin title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@mixin base {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+}
+
+@mixin subtitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+}
