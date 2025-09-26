@@ -65,15 +65,32 @@
 
     @include mq(tablet) {
       font-size: 16px;
-      br {
-        display: none;
-      }
+      padding-right: 15px;
     }
 
     @include mq(desktop) {
       font-size: 20px;
       line-height: 145%;
-      width: 468px;
+      width: 484px;
+      padding: 0;
+    }
+  }
+
+  &__brtel {
+    @include mq(tablet) {
+      display: none;
+    }
+
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+
+  &__brtab {
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
     }
   }
 
@@ -151,42 +168,4 @@
       }
     }
   }
-
-
-
-
-
-
-
-
-
-
-/*
-
- &__brtel {
-  display: inline;
-}
-
-&__brtabl,
-&__brdesk {
-  display: none;
-}
-
-@include mq(tablet) {
-  &__brtel {
-    display: none;
-  }
-  &__brtabl {
-    display: inline;
-  }
-}
-
- @include mq(desktop) {
-  &__brtabl {
-    display: none;
-  }
-  &__brdesk {
-    display: inline;
-  }
-} */
 }
