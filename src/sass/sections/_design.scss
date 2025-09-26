@@ -29,6 +29,8 @@
       padding: 0;
       gap: 150px;
       position: relative;
+      margin: 0 auto;
+      left: -141px;
     }
   }
 
@@ -39,13 +41,8 @@
   }
 
   &__title {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 120%;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: #e7e7e7;
+    @include title;
+    color: $first-color;
     margin: 0 0 32px 0;
 
     @include mq(tablet) {
@@ -59,13 +56,8 @@
     }
 
     &--capable {
-      font-family: var(--font-family);
-      font-weight: 600;
-      font-size: 24px;
-      line-height: 120%;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: #e7e7e7;
+      @include title;
+      color: $first-color;
       margin: 0 0 32px 0;
 
       @include mq(desktop) {
@@ -78,24 +70,38 @@
   }
 
   &__text {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 125%;
-    color: rgba(255, 255, 255, 0.8);
+    @include base;
+    color: $second-color;
     margin: 0;
 
     @include mq(tablet) {
       font-size: 16px;
-      br {
-        display: none;
-      }
+      padding-right: 15px;
     }
 
     @include mq(desktop) {
       font-size: 20px;
       line-height: 145%;
-      width: 468px;
+      width: 484px;
+      padding: 0;
+    }
+  }
+
+  &__brtel {
+    @include mq(tablet) {
+      display: none;
+    }
+
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+
+  &__brtab {
+    display: none;
+
+    @include mq(tablet) {
+      display: flex;
     }
   }
 
@@ -117,11 +123,8 @@
   }
 
   &__subtitle {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 125%;
-    color: #e7e7e7;
+    @include subtitle;
+    color: $first-color;
     margin: 0 0 16px 0;
 
     @include mq(desktop) {

@@ -2,15 +2,20 @@
   $mobile: 480px;
   $tablet: 768px;
   $desktop: 1440px;
-  @if $range == mobile {
+
+  @if $range ==mobile {
     @media (min-width: $mobile) {
       @content;
     }
-  } @else if $range == tablet {
+  }
+
+  @else if $range ==tablet {
     @media (min-width: $tablet) {
       @content;
     }
-  } @else if $range == desktop {
+  }
+
+  @else if $range ==desktop {
     @media (min-width: $desktop) {
       @content;
     }
@@ -18,15 +23,96 @@
 }
 
 @mixin section-padding($pmob, $ptab, $pdesk) {
-    padding-top: $pmob;
-    @include mq(tablet) {
-        padding-top: $ptab;
-    }
+  margin-top: $pmob;
 
-    @include mq(desktop) {
-        padding-top: $pdesk;
-    }
+  @include mq(tablet) {
+    margin-top: $ptab;
+  }
+
+  @include mq(desktop) {
+    padding-top: $pdesk;
+  }
 }
+
+@mixin section-margin($pmob, $ptab, $pdesk) {
+  margin-top: $pmob;
+
+  @include mq(tablet) {
+    margin-top: $ptab;
+  }
+
+  @include mq(desktop) {
+    margin-top: $pdesk;
+  }
+}
+
+@mixin txt($fw: 600, $fs: 24px, $lh: 120%, $lett-sp: 0.02em) {
+  font-family: $font-family;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $lett-sp;
+}
+
+@mixin text-style($fw, $fs-mob, $fs-tab, $fs-desk) {
+  font-weight: $fw;
+  font-size: $fs-mob;
+  line-height: 125%;
+
+  @include mq(tablet) {
+    font-size: $fs-tab;
+  }
+
+  @include mq(desktop) {
+    font-size: $fs-desk;
+  }
+}
+
+@mixin section-title($fw, $fs-mob, $fs-tab, $fs-desk) {
+  @include text-style($fw, $fs-mob, $fs-tab, $fs-desk);
+  font-family: $font-family;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $title-color;
+  padding-bottom: 32px;
+  margin: 0;
+
+  @include mq(desktop) {
+    padding-bottom: 50px;
+  }
+}
+
+@mixin section-subtitle {
+  @include text-style(600, 20px, 20px, 28px);
+  font-family: $font-family;
+  color: $title-color;
+  padding-bottom: 16px;
+  margin: 0;
+}
+
+@mixin title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@mixin base {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+}
+
+@mixin subtitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+}
+
 
 @mixin base {
   font-family: var(--font-family);
