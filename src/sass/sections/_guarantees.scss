@@ -1,0 +1,107 @@
+.guarantees {
+    margin: 0;
+    background: $bg;
+    overflow: hidden;
+    @include section-padding(52px, 100px, 170px);
+
+    &__title {
+        @include txt(600, 24px, 120%, 0.02em);
+        text-transform: uppercase;
+        color: $color-txt;
+        padding-bottom: 32px;
+        margin: 0 auto;
+
+        @include mq(tablet) {
+            font-size: 30px;
+        }
+
+        @include mq(desktop) {
+            font-size: 54px;
+        }
+    }
+
+    &__subtitle {
+        @include txt(600, 20px, 125%);
+        color: $color-txt;
+
+        @include mq(desktop){
+            font-size: 28px
+        }
+    }
+
+    &__text {
+        @include txt(400, 14px, 125%, 0.02em);
+        color: $color-txt;
+        margin: 0 auto;
+
+        @include mq(tablet){
+            font-size: 16px;
+        }
+
+        @include mq(desktop) {
+            :nth-child(1) {
+                width: 303px;
+            }
+            font-size: 20px;
+        }
+    }
+
+    &__content {
+        margin-bottom: 24px;
+
+        &:nth-child(2) {
+            margin-bottom: 32px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            border-radius: 100%;
+            width: 13px;
+            height: 13px;
+            background-color: #df3d3a;
+        }
+    }
+
+    &__ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    &__image {
+        flex-shrink: 0;
+
+        @include mq(tablet) {
+            width: 354px;
+            height: 442px;
+            position: relative;
+            left: calc(50% - 237px);
+        }
+
+        @include mq(desktop) {
+            width: 590px;
+            height: 565px;
+            position: relative;
+            left: calc(50% - 540px);
+        }
+    }
+
+    .container {
+        @include mq(tablet) {
+            display: flex;
+            flex-direction: row-reverse;
+            position: relative;
+            align-items: center;
+        }
+    }
+
+    &__info {
+        @include mq(desktop) {
+            margin-left: 0;
+            width: 405px;
+        }
+    }
+}
