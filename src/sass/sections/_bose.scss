@@ -1,0 +1,77 @@
+.bose {
+  @include section-margin(52px, 100px, 170px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  & .container {
+    min-width: 280;
+    padding: 0;
+    margin: 0 20px;
+    height: 495px;
+    @include mq(tablet) {
+      display: flex;
+      flex-direction: row;
+      min-width: 708;
+      height: 297px;
+      margin-left: 60px;
+      gap: 60px;
+    }
+    @include mq(desktop) {
+      margin-left: 190px;
+      min-width: 1250;
+      height: 586px;
+      gap: 170px;
+    }
+  }
+  &__title {
+    @include section-title(600, 24px, 30px, 54px);
+  }
+  &__subtitle {
+    @include section-subtitle;
+    @include mq(desktop) {
+      padding-bottom: 20px;
+    }
+  }
+  &__desc {
+    @include text-style(400, 14px, 16px, 20px);
+    font-family: $font-family;
+    color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 32px;
+    margin: 0;
+    @include mq(tablet) {
+      width: 285px;
+    }
+    @include mq(desktop) {
+      width: 350px;
+    }
+  }
+  &__text {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    @include mq(tablet) {
+      width: 294px;
+    }
+    @include mq(desktop) {
+      width: 380px;
+    }
+  }
+  &__image,
+  &__wraper {
+    position: absolute;
+    margin: 0 auto;
+    width: 280px;
+    height: 253px;
+    @include mq(tablet) {
+      right: 0;
+      width: 354px;
+      height: 297px;
+    }
+    @include mq(desktop) {
+      right: 0;
+      width: 700px;
+      height: 586px;
+    }
+  }
+}
+/*test*/
