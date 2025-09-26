@@ -1,22 +1,22 @@
 .brand {
-  @include section-margin(52px, 100px, 170px);
+  @include section-padding(52px, 100px, 170px);
   display: flex;
   justify-content: center;
   & .container {
     position: relative;
-    min-width: 280;
+    min-width: 280px;
     padding: 0;
     margin: 0 20px;
     height: 1301px;
     @include mq(tablet) {
-      min-width: 708;
+      min-width: 708px;
       margin-left: 60px;
       margin-right: 0;
       height: 999px;
     }
     @include mq(desktop) {
       margin-left: 190px;
-      min-width: 1250;
+      min-width: 1250px;
       height: 1113px;
     }
   }
@@ -31,7 +31,6 @@
       padding-bottom: 32px;
     }
   }
-  &__image,
   &__picture {
     width: 280px;
     height: 251px;
@@ -47,7 +46,12 @@
       height: 628px;
     }
   }
-  &__image--camera,
+  &__image, &__image--camera {
+    display: inline-block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
   &__picture--camera {
     width: 280px;
     height: 343px;
@@ -74,8 +78,7 @@
     margin: 0;
     padding-top: 32px;
     @include text-style(400, 14px, 16px, 20px);
-    font-family: $font-family;
-    color: rgba(255, 255, 255, 0.8);
+    color: $description-color;
     @include mq(tablet) {
       width: 294px;
       line-height: 145%;

@@ -1,24 +1,24 @@
 .bose {
-  @include section-margin(52px, 100px, 170px);
-  position: relative;
+  @include section-padding(52px, 100px, 170px);
   display: flex;
   justify-content: center;
   & .container {
-    min-width: 280;
+    position: relative;
+    min-width: 280px;
     padding: 0;
     margin: 0 20px;
     height: 495px;
     @include mq(tablet) {
       display: flex;
       flex-direction: row;
-      min-width: 708;
+      min-width: 708px;
       height: 297px;
       margin-left: 60px;
       gap: 60px;
     }
     @include mq(desktop) {
       margin-left: 190px;
-      min-width: 1250;
+      min-width: 1250px;
       height: 586px;
       gap: 170px;
     }
@@ -34,8 +34,7 @@
   }
   &__desc {
     @include text-style(400, 14px, 16px, 20px);
-    font-family: $font-family;
-    color: rgba(255, 255, 255, 0.8);
+    color: $description-color;
     padding-bottom: 32px;
     margin: 0;
     @include mq(tablet) {
@@ -56,7 +55,6 @@
       width: 380px;
     }
   }
-  &__image,
   &__wraper {
     position: absolute;
     margin: 0 auto;
@@ -73,5 +71,10 @@
       height: 586px;
     }
   }
+  &__image {
+    display: inline-block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
 }
-/*test*/

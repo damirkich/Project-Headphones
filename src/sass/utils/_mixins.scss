@@ -17,18 +17,18 @@
   }
 }
 
-@mixin section-margin($pmob, $ptab, $pdesk) {
-    margin-top: $pmob;
-    @include mq(tablet) {
-        margin-top: $ptab;
-    }
-
-    @include mq(desktop) {
-        margin-top: $pdesk;
-    }
+@mixin section-padding($pmob, $ptab, $pdesk) {
+  padding-top: $pmob;
+  @include mq(tablet) {
+    padding-top: $ptab;
+  }
+  @include mq(desktop) {
+    padding-top: $pdesk;
+  }
 }
 
 @mixin text-style($fw, $fs-mob, $fs-tab, $fs-desk) {
+  font-family: $font-family;
   font-weight: $fw;
   font-size: $fs-mob;
   line-height: 125%;
@@ -40,9 +40,8 @@
   }
 }
 
-@mixin section-title($fw, $fs-mob, $fs-tab, $fs-desk)  {
+@mixin section-title($fw, $fs-mob, $fs-tab, $fs-desk) {
   @include text-style($fw, $fs-mob, $fs-tab, $fs-desk);
-  font-family: $font-family;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $title-color;
@@ -55,10 +54,7 @@
 
 @mixin section-subtitle {
   @include text-style(600, 20px, 20px, 28px);
-  font-family: $font-family;
   color: $title-color;
   padding-bottom: 16px;
   margin: 0;
 }
-
-
