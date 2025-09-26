@@ -1,26 +1,97 @@
-<section>
-    <div class="container">
-        <h2>brand creation history</h2>
-        <p>
-          The history of Bose Corporation began with disappointment. In 1956, MIT
-          graduate student Amar Bose bought one of the best stereo systems at the
-          time for his home. After a few minutes of listening to the audio
-          recording, his bewilderment turned to disappointment.
-        </p>
-        <picture></picture>
-        <p>
-          From Amar's point of view, the sound was so flat and unnatural that it was
-          better not to listen to the music at all than to listen to it in such a
-          distorted form.
-        </p>
-        <p>
-          Bose's frustration grew into a firm determination to build audio
-          equipments that would reproduce sound with impeccable accuracy and
-          naturalness
-        </p>
-        <picture></picture>
-        <div></div>
-        <h3>Never stop dreaming. Always dream of the best, and think about how to achieve it.</h3>
-        <p>Amar Bose is a company founder </p>
+<section class="brand">
+  <div class="container">
+    <h2 class="brand__title">brand creation history</h2>
+    <p class="brand__desc">
+      The history of Bose Corporation began with disappointment. In 1956, MIT
+      graduate student Amar Bose bought one of the best stereo systems at the
+      time for his home. <br>After a few minutes of listening to the audio
+      recording, his bewilderment turned to disappointment.
+    </p>
+    <div class="brand__picture">
+      <picture>
+        <source
+          srcset="
+            ./images/brand/photo-desk.webp    1x,
+            ./images/brand/photo-desk@2x.webp 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ./images/brand/photo-tab.webp    1x,
+            ./images/brand/photo-tab@2x.webp 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/brand/photo-mob.webp    1x,
+            ./images/brand/photo-mob@2x.webp 2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          class="brand__image"
+          src="./images/brand/photo-mob.webp"
+          alt="photo"
+          width="280"
+          height="251"
+        />
+      </picture>
     </div>
+    <p class="brand__desc">
+      From Amar's point of view, the sound was so flat and unnatural that it was
+      better not to listen to the music at all than to listen to it in such a
+      distorted form.
+    </p>
+    <p class="brand__desc brand__desc--three">
+      Bose's frustration grew into a firm determination to build audio
+      equipments that would reproduce sound with impeccable accuracy and
+      naturalness
+    </p>
+    <div class="brand__picture--camera">
+      <picture>
+        <source
+          srcset="
+            ./images/brand/camera-desk.webp    1x,
+            ./images/brand/camera-desk@2x.webp 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ./images/brand/camera-tab.webp    1x,
+            ./images/brand/camera-tab@2x.webp 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/brand/camera-mob.webp    1x,
+            ./images/brand/camera-mob@2x.webp 2x
+          "
+          media="(min-width: 320px)"
+        />
+        <img
+          class="brand__image--camera"
+          src="./images/brand/camera-mob.webp"
+          alt="camera"
+          width="280"
+          height="343"
+        />
+      </picture>
+    </div>
+    <div>
+      <div class="brand__quote">
+        <svg width="34" height="25" viewBox="0 0 34 25" aria-label="quote">
+          <use href="./images/brand/quote.svg"></use>
+        </svg>
+      </div>
+      <h3 class="brand__subtitle">
+        Never stop dreaming. Always dream of the best, and think about how to
+        achieve it.
+      </h3>
+      <p class="brand__desc">Amar Bose is a company founder</p>
+    </div>
+  </div>
 </section>
