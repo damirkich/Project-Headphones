@@ -1,0 +1,108 @@
+.footer {
+  padding: 72px 0 52px 0;
+
+  @include mq(tablet) {
+    padding: 100px 0 50px 0;
+  }
+
+  @include mq(desktop) {
+    padding: 170px 0 74px 0;
+  }
+
+  .container {
+    @include mq(tablet) {
+      display: flex;
+      padding: 0 0 0 40px;
+    }
+
+    @include mq(desktop) {
+      padding: 0;
+    }
+  }
+
+  &__link {
+    @include base;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @include mq(desktop) {
+      font-size: 16px;
+    }
+
+    &--address {
+      font-family: var(--third-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      @include mq(tablet) {
+        position: relative;
+        right: -145px;
+        bottom: -85px;
+      }
+
+      @include mq(desktop) {
+        position: static;
+        margin-left: 185px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    @include mq(desktop) {
+      gap: 50px;
+      flex-direction: row;
+    }
+
+    &--two {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      align-items: flex-end;
+
+      @include mq(tablet) {
+        align-items: flex-start;
+      }
+
+      @include mq(desktop) {
+        gap: 50px;
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 52px;
+
+    @include mq(tablet) {
+      gap: 139px;
+      margin: 0;
+    }
+
+    @include mq(desktop) {
+      gap: 50px;
+    }
+  }
+}
