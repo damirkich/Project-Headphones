@@ -1,5 +1,8 @@
 .feedback {
   background: #191919;
+
+  @include section-padding(20px, 50px, 100px);
+
   @include mq(desktop) {
     position: relative;
     min-height: 1210px;
@@ -24,7 +27,7 @@
   }
 }
 
-a {
+.feedback__link {
   font-family: Gilroy;
   font-weight: 400;
   font-size: 14px;
@@ -36,7 +39,7 @@ a {
   color: #ffffffcc;
 }
 
-.title {
+.feedback__title {
   width: 121px;
   height: 29px;
   color: #e7e7e7;
@@ -46,9 +49,22 @@ a {
   line-height: 120%;
   letter-spacing: 2%;
   text-transform: uppercase;
+
+  @include mq(tablet) {
+    width: 400px;
+    height: 36px;
+    font-size: 30px;
+    margin-top: 100px;
+  }
+
+  @include mq(desktop) {
+    height: 65px;
+    font-size: 54px;
+    margin-top: 0;
+  }
 }
 
-.description {
+.feedback__description {
   width: 281px;
   height: 40px;
   color: #ffffffcc;
@@ -59,9 +75,22 @@ a {
   letter-spacing: 0%;
   margin-top: 32px;
   margin-bottom: 20px;
+
+  @include mq(tablet) {
+    width: 445px;
+    height: 25px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  @include mq(desktop) {
+    width: 400px;
+    height: 70px;
+    font-size: 28px;
+  }
 }
 
-.text-box {
+.feedback__field {
   width: 280px;
   height: 68px;
   color: #ffffffcc;
@@ -79,29 +108,48 @@ a {
     outline: none;
   }
 
-  &__big {
-    width: 280px;
-    height: 112px;
-    color: #ffffffcc;
-    background: none;
-    border: none;
-    border-bottom: 2px solid #ffffff4d;
-    font-family: Gilroy;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 125%;
-    letter-spacing: 0%;
-    resize: none;
-    padding-top: 32px;
+  @include mq(tablet) {
+    width: 646px;
+  }
 
-    &:focus {
-      border-bottom: 2px solid #df3d3a;
-      outline: none;
-    }
+  @include mq(desktop) {
+    width: 510px;
+    font-size: 20px;
+    line-height: 70%;
   }
 }
 
-.text-box::placeholder {
+.feedback__message {
+  width: 280px;
+  height: 112px;
+  color: #ffffffcc;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #ffffff4d;
+  font-family: Gilroy;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0%;
+  resize: none;
+  padding-top: 32px;
+
+  &:focus {
+    border-bottom: 2px solid #df3d3a;
+    outline: none;
+  }
+
+  @include mq(tablet) {
+    width: 646px;
+  }
+
+  @include mq(desktop) {
+    width: 510px;
+    font-size: 20px;
+  }
+}
+
+.feedback_field::placeholder {
   color: #ffffff4d;
 }
 
@@ -116,33 +164,39 @@ a {
   line-height: 125%;
   color: #ffffffcc;
 
-  &__checkbox {
-    appearance: none;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #e9edfa;
-    background: transparent;
-    margin-right: 20px;
-    position: relative;
+  @include mq(desktop) {
+    font-size: 16px;
+    line-height: 160%;
+    margin-top: 53px;
+  }
+}
 
-    &:checked {
-      &::before {
-        content: '';
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        background-image: url(../images/feedback/check.svg);
-        background-size: cover;
-        position: absolute;
-        top: 20%;
-        left: 60%;
-        transform: translate(-50%, -50%);
-      }
+.feedback__checkbox {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #e9edfa;
+  background: transparent;
+  margin-right: 20px;
+  position: relative;
+
+  &:checked {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-image: url(../images/feedback/check.svg);
+      background-size: cover;
+      position: absolute;
+      top: 20%;
+      left: 60%;
+      transform: translate(-50%, -50%);
     }
   }
 }
 
-.send {
+.feedback__button {
   display: flex;
   width: 280px;
   height: 58px;
@@ -151,88 +205,105 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  font-family: Gilroy;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  color: #ffffffe5;
+  position: relative;
+  cursor: pointer;
 
-  &__text {
-    width: 41px;
-    height: 20px;
-    font-family: Gilroy;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 2%;
-    text-transform: uppercase;
-    color: #ffffffe5;
-  }
+  &.draw {
+    transition: color 0.25s;
 
-  &:active {
-    background: #df3d3a;
-  }
-}
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+      border: 2px solid transparent;
+      width: 0;
+      height: 0;
+    }
 
-@media (min-width: 768px) {
-  .title {
-    width: 400px;
-    height: 36px;
-    font-size: 30px;
-    margin-top: 100px;
-  }
+    // This covers the top & right borders (expands right, then down)
+    &::before {
+      top: 0;
+      left: 0;
+    }
 
-  .description {
-    width: 445px;
-    height: 25px;
-    font-weight: 600;
-    font-size: 20px;
-  }
+    // And this the bottom & left borders (expands left, then up)
+    &::after {
+      bottom: 0;
+      right: 0;
+    }
 
-  .text-box {
-    width: 646px;
+    // Hover styles
+    &:hover::before,
+    &:hover::after {
+      width: 100%;
+      height: 100%;
+    }
 
-    &__big {
-      width: 646px;
+    &:hover::before {
+      border-top-color: $cyan; // Make borders visible
+      border-right-color: $cyan;
+      transition: width 0.25s ease-out,
+        // Width expands first
+        height 0.25s ease-out 0.25s; // And then height
+    }
+
+    &:hover::after {
+      border-bottom-color: $cyan; // Make borders visible
+      border-left-color: $cyan;
+      transition: border-color 0s ease-out 0.5s,
+        // Wait for ::before to finish before showing border
+        width 0.25s ease-out 0.5s,
+        // And then exanding width
+        height 0.25s ease-out 0.75s; // And finally height
     }
   }
 
-  .send {
+  // Inherits from .draw
+  &.meet {
+    &:hover {
+      color: $yellow;
+    }
+
+    // Start ::after in same position as ::before
+    &::after {
+      top: 0;
+      left: 0;
+    }
+
+    // Change colors
+    &:hover::before {
+      border-top-color: $yellow;
+      border-right-color: $yellow;
+    }
+
+    &:hover::after {
+      border-bottom-color: $yellow;
+      border-left-color: $yellow;
+      transition: // Animate height first, then width
+        height 0.25s ease-out, width 0.25s ease-out 0.25s;
+    }
+  }
+
+  @include mq(tablet) {
     width: 294px;
   }
-}
 
-@media (min-width: 1440px) {
-  .title {
-    height: 65px;
-    font-size: 54px;
-    margin-top: 0;
-  }
-
-  .description {
-    width: 400px;
-    height: 70px;
-    font-size: 28px;
-  }
-
-  .text-box {
-    width: 510px;
-    font-size: 20px;
-    line-height: 70%;
-
-    &__big {
-      width: 510px;
-      font-size: 20px;
-    }
-  }
-
-  .privacy-policy {
-    font-size: 16px;
-    line-height: 160%;
-    margin-top: 53px;
-  }
-
-  .send {
+  @include mq(desktop) {
     width: 510px;
     margin-top: 89px;
   }
+}
 
-  .feedback__content {
+.feedback__content {
+  @include mq(desktop) {
     display: flex;
     gap: 150px;
   }

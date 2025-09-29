@@ -40,37 +40,47 @@
     </picture>
     <div class="feedback__content">
       <div>
-        <h1 class="title">FEEDBACK</h1>
-        <p class="description">
+        <h1 class="feedback__title">FEEDBACK</h1>
+        <p class="feedback__description">
           We'll help you find the right headphones for you.
         </p>
       </div>
       <form>
-        <input type="text" placeholder="Your name" class="text-box" />
-        <input type="email" placeholder="Your e-mail" class="text-box" />
+        <input
+          type="text"
+          placeholder="Your name"
+          class="feedback__field"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Your e-mail"
+          class="feedback__field"
+          required
+        />
         <textarea
           name="message"
           id="message"
           placeholder="Send us a message"
-          class="text-box__big"
+          class="feedback__message"
         ></textarea>
         <label for="policy" class="privacy-policy"
           ><input
             type="checkbox"
             name="policy"
             id="policy"
-            class="privacy-policy__checkbox"
+            class="feedback__checkbox"
+            required
           />
           I agree to the
           <a
             href="https://business.vic.gov.au/tools-and-templates/privacy-policy-template"
             target="_blank"
+            class="feedback__link"
             >privacy policy</a
           >
         </label>
-        <button type="submit" class="send">
-          <p class="send__text">SEND</p>
-        </button>
+        <button type="submit" class="feedback__button draw meet">SEND</button>
       </form>
     </div>
   </div>
