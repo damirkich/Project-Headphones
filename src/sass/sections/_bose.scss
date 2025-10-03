@@ -14,6 +14,7 @@
       min-width: 708px;
       height: 297px;
       margin-left: 60px;
+      margin-right: 0;
       gap: 60px;
     }
     @include mq(desktop) {
