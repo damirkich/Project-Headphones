@@ -34,6 +34,36 @@
   }
 }
 
+@mixin text-34px ($weight: 600, $size: 34px, $spacing: 0.02em, $line: 100%) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line;
+    letter-spacing: $spacing;
+}
+
+@mixin text-16px ($weight: 600, $size: 16px, $spacing: 0.02em, $transform: uppercase) {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: $spacing;
+    text-transform: $transform;
+}
+
+@mixin text-w400 ($weight: 400, $size: 16px, $line: 125%) {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-size: $size;
+        line-height: $line;
+}
+
+@mixin text-w400-2 ($weight: 400, $size: 14px, $line: 125%) {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-size: $size;
+        line-height: $line;
+}
+
 @mixin section-margin($pmob, $ptab, $pdesk) {
   margin-top: $pmob;
 
