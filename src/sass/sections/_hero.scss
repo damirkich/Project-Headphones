@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 72px;
-  @include section-padding(30px, 50px, 66px);
+  @include section-padding(30px, 50px, 20px);
   &__logo {
     height: 12px;
     width: 100px;
@@ -225,6 +225,12 @@
   }
 
   &__btn {
+
+  &:hover {
+    background-color: #b5302d;
+    cursor: pointer;
+  }
+    transition: 0.5s ease;
     width: 280px;
     height: 58px;
     text-transform: uppercase;
