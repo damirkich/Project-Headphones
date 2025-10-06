@@ -32,22 +32,22 @@
     }
   }
   &__picture {
-    width: 280px;
-    height: 251px;
+    min-width: 280px;
+    min-height: 251px;
     @include mq(tablet) {
-      width: 354px;
-      height: 524px;
+      min-width: 354px;
+      min-height: 524px;
       position: absolute;
       right: 0;
       top: 0;
     }
     @include mq(desktop) {
-      width: 700px;
-      height: 628px;
+      min-width: 700px;
+      min-height: 628px;
     }
   }
   &__image, &__image--camera {
-    display: inline-block;
+    display: block;
     object-fit: cover;
     width: 100%;
     height: auto;

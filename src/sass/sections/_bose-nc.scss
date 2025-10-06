@@ -40,22 +40,22 @@
     }
   }
   &__wrapper {
-    width: 280px;
-    height: 265px;
+    min-width: 280px;
+    min-height: 265px;
     @include mq(tablet) {
-      width: 648px;
-      height: 446px;
+      min-width: 648px;
+      min-height: 446px;
     }
     @include mq(desktop) {
-      width: 700px;
-      height: 664px;
+      min-width: 700px;
+      min-height: 664px;
       position: absolute;
       right: 0;
       bottom: 0;
     }
   }
   &__image {
-    display: inline-block;
+    display: min-block;
     object-fit: cover;
     width: 100%;
     height: auto;
