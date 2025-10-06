@@ -25,6 +25,12 @@
       padding-left: 60px;
     }
     &--list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-left: 20px;
+      padding-top: 100px;
+      position: absolute;
       @include mq(desktop) {
         flex-direction: row;
         position: static;
@@ -33,12 +39,7 @@
         gap: 77px;
         width: fit-content;
       }
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      padding-left: 20px;
-      padding-top: 100px;
-      position: absolute;
+  
 
       &-item-link {
         @include mq(desktop) {
@@ -92,13 +93,6 @@
 }
 
 .burger {
-  @include mq(desktop) {
-    display: none;
-  }
-
-  @include mq(tablet) {
-    right: 0;
-  }
   display: flex;
   z-index: 1000;
   top: 10px;
@@ -110,6 +104,14 @@
   right: 30px;
   top: 0;
   transition: transform 0.3s ease;
+  @include mq(desktop) {
+    display: none;
+  }
+
+  @include mq(tablet) {
+    right: 0;
+  }
+
 
   span {
     width: 26px;
