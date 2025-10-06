@@ -27,9 +27,9 @@
     &--list {
       @include mq(desktop) {
         flex-direction: row;
-        position: absolute;
-        top: -120px;
-        left: 700px;
+        position: static;
+        padding: 0;
+        margin-bottom: 0;
         gap: 77px;
         width: fit-content;
       }
@@ -83,6 +83,10 @@
 
     @include mq(desktop) {
       width: 1350px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 100%;
     }
   }
 }
@@ -150,8 +154,6 @@
 }
 
 .hero {
-
-
   &__info {
     margin-top: 32px;
 
@@ -227,17 +229,16 @@
   }
 
   &__btn {
-
-  &:hover {
-    background-color: #b5302d;
-    cursor: pointer;
-  }
+    &:hover {
+      background-color: #b5302d;
+      cursor: pointer;
+    }
     transition: 0.5s ease;
     width: 280px;
     height: 58px;
     text-transform: uppercase;
     background: #df3d3a;
-    @include text-34px (600, 16px);
+    @include text-34px(600, 16px);
     color: $text;
     @include mq(mobile) {
       margin: 0;
@@ -270,4 +271,3 @@
 .logo {
   display: block;
 }
-
