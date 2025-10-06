@@ -1,0 +1,275 @@
+.header {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 72px;
+  @include section-padding(30px, 50px, 20px);
+  &__logo {
+    height: 12px;
+    width: 100px;
+  }
+
+  &__nav {
+    transition: 0.3s ease;
+    left: -100%;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    @include mq(desktop) {
+      opacity: 1;
+      pointer-events: all;
+      position: static;
+    }
+    @include mq(tablet) {
+      padding-left: 60px;
+    }
+    &--list {
+      @include mq(desktop) {
+        flex-direction: row;
+        position: static;
+        // top: -120px;
+        // left: 700px;
+        padding-top: 0;
+        margin-bottom: 0;
+        gap: 77px;
+        width: fit-content;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-left: 20px;
+      padding-top: 100px;
+      position: absolute;
+
+      &-item-link {
+        @include mq(desktop) {
+          font-family: $font-family;
+          font-weight: 400;
+          font-size: 16px;
+          color: rgba(255, 255, 255, 0.8);
+          text-wrap: nowrap;
+        }
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 125%;
+        color: $text;
+      }
+    }
+    &.active {
+      transform: translateX(0);
+      background: #161616;
+      width: 100vw;
+      z-index: 10;
+      height: 100vh;
+      top: 0;
+      opacity: 1;
+      pointer-events: all;
+      left: 0;
+      @include mq(tablet) {
+        height: 367px;
+      }
+    }
+
+    &.active .burger__logo {
+      display: block;
+      @include mq(tablet) {
+        margin-left: 60px;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+
+    @include mq(desktop) {
+      width: 1350px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 100%;
+    }
+  }
+}
+
+.burger {
+  @include mq(desktop) {
+    display: none;
+  }
+
+  @include mq(tablet) {
+    right: 0;
+  }
+  display: flex;
+  z-index: 1000;
+  top: 10px;
+  transition: 0.5s ease;
+  position: absolute;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  right: 30px;
+  top: 0;
+  transition: transform 0.3s ease;
+
+  span {
+    width: 26px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &.active {
+    span {
+      width: 20px;
+    }
+    transform: rotate(90deg);
+
+    span:nth-child(1) {
+      transform: translateY(3px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  &__logo {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 32px;
+    width: 100px;
+
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+}
+
+.hero {
+  &__info {
+    margin-top: 32px;
+
+    &--p {
+      @include text-w400-2;
+      color: $text;
+
+      @include mq(desktop) {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        margin-left: -150px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 5;
+    color: $text;
+
+    @include text-34px;
+    text-transform: uppercase;
+
+    @include mq(desktop) {
+      font-size: 74px;
+      text-transform: uppercase;
+      color: $text;
+      margin-left: -150px;
+    }
+  }
+
+  .container {
+    @include mq(desktop) {
+      position: relative;
+      height: 598px;
+    }
+  }
+
+  &__pic {
+    width: 280px;
+    height: 240px;
+    margin-left: auto;
+    object-fit: cover;
+    margin-top: 32px;
+    display: block;
+    @include mq(tablet) {
+      position: relative;
+      width: 340px;
+      height: 340px;
+      margin: 0;
+      left: 101px;
+      bottom: 280px;
+      margin: 0 auto;
+      align-items: flex-end;
+    }
+
+    @include mq(desktop) {
+      width: 700px;
+      height: 568px;
+      margin-left: auto;
+      margin-right: 450px;
+      position: absolute;
+      right: -650px;
+      top: 0;
+    }
+  }
+
+  &__btn {
+    &:hover {
+      background-color: #b5302d;
+      cursor: pointer;
+    }
+    transition: 0.5s ease;
+    width: 280px;
+    height: 58px;
+    text-transform: uppercase;
+    background: #df3d3a;
+    @include text-34px(600, 16px);
+    color: $text;
+    @include mq(mobile) {
+      margin: 0;
+    }
+
+    @include mq(tablet) {
+      width: 400px;
+      height: 68px;
+    }
+
+    @include mq(desktop) {
+      flex-shrink: 0;
+      margin-left: -150px;
+    }
+  }
+
+  @include mq(tablet) {
+    &__title {
+      margin-top: 100px;
+      margin-bottom: 40px;
+    }
+
+    &__wrapper {
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+}
+
+.logo {
+  display: block;
+}

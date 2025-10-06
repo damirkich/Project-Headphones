@@ -1,6 +1,5 @@
 .review {
-
-@include section-padding(52px, 100px, 170px);
+  @include section-padding(52px, 100px, 170px);
 
   .container {
     max-width: 100%;
