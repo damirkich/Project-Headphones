@@ -1,5 +1,6 @@
 .review {
-  @include section-padding(52px, 100px, 170px);
+
+@include section-padding(52px, 100px, 170px);
 
   .container {
     max-width: 100%;
@@ -99,6 +100,7 @@
   }
 
   &__indicators {
+    outline: none;
     @include text($Fsize: 20px);
     color: $extra-color;
     opacity: 0.2;
@@ -109,6 +111,15 @@
 
     &:active {
       opacity: 1;
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    &:focus {
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
     }
   }
 }
