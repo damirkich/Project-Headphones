@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   margin-bottom: 72px;
@@ -200,6 +201,7 @@
     width: 280px;
     height: 240px;
     margin-left: auto;
+    object-fit: cover;
     margin-top: 32px;
     display: block;
     @include mq(tablet) {

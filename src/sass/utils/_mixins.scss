@@ -23,10 +23,9 @@
 }
 
 @mixin section-padding($pmob, $ptab, $pdesk) {
-  margin-top: $pmob;
-
+  padding-top: $pmob;
   @include mq(tablet) {
-    margin-top: $ptab;
+    padding-top: $ptab;
   }
 
   @include mq(desktop) {
@@ -149,4 +148,27 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 125%;
+}
+
+@mixin title(
+  $Ffamily: $font-family,
+  $Fweight: 600,
+  $Fsize: 24px,
+  $LineH: 120%,
+  $LetS: 0.02em,
+  $Ttrans: uppercase
+) {
+  font-family: $Ffamily;
+  font-weight: $Fweight;
+  font-size: $Fsize;
+  line-height: $LineH;
+  letter-spacing: $LetS;
+  text-transform: $Ttrans;
+}
+
+@mixin text($Ffamily: $font-family, $Fweight: 400, $Fsize: 14px, $LineH: 125%) {
+  font-family: $Ffamily;
+  font-weight: $Fweight;
+  font-size: $Fsize;
+  line-height: $LineH;
 }
