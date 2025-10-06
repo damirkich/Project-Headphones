@@ -21,6 +21,7 @@
     }
 
     &__subtitle {
+        padding-top: 24px;
         @include txt(600, 20px, 125%);
         color: $color-txt;
 
