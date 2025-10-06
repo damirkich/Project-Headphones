@@ -1,8 +1,8 @@
 .faq {
-  @include section-padding(0, 100px, 170px);
-  .container {
-    width: auto;
-  }
+  @include section-padding(16px, 100px, 170px);
+  // .container {
+  //   width: auto;
+  // }
   &__title {
     @include title;
     color: $main-color;

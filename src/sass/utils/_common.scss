@@ -1,44 +1,87 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+// .container {
+//     width: 240px;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     margin: 0 auto;
+
+//     @include mq(tablet) {
+//         width: 608px;
+
+//     }
+
+//     @include mq(desktop) {
+//         width: 1020px;
+//     }
+// }
+
 .container {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
 
-  @include mq(tablet) {
-    width: 608px;
-  }
+    @include mq(tablet) {
+        width: 648px;
+        padding: 0;
+    }
 
-  @include mq(desktop) {
-    width: 1020px;
-  }
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: local('Gilroy Regular'), local('Gilroy-Regular'),
-    url('../fonts/Gilroy-Regular.woff2') format('woff2'),
-    url('../fonts/Gilroy-Regular.woff') format('woff'),
-    url('../fonts/Gilroy-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
-    url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
-    url('../fonts/Gilroy-Semibold.woff') format('woff'),
-    url('../fonts/Gilroy-Semibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+    @include mq(desktop) {
+        width: 1060px;
+    }
 }
 
 body {
-  background-color: $bc-color;
+    background: $background-color;
 }
 
-ol {
-  margin: 0;
-  padding: 0;
+body {
+    background: $background-color;
+}
+
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
+        url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Semibold.woff') format('woff'),
+        url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+  *{
+    box-sizing: border-box;
+  }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border:none;
+}
+
+body {
+    background-color: #191919;
 }
