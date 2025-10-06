@@ -39,6 +39,7 @@
     justify-content: space-between;
     padding: 0;
     margin-bottom: 32px;
+    position: relative;
   }
 
   &__number {
@@ -81,7 +82,7 @@
       @include text($Fsize: 16px, $LineH: 145%);
       max-width: 450px;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: 1440px) {
       @include text($Fweight: 600, $Fsize: 28px, $LineH: 125%);
       color: $main-color;
       max-width: 800px;
@@ -130,14 +131,17 @@
     }
 
     &-body {
-      @include text($second-family, 400, 20px, 145%);
+      @include text($second-family, 200, 11.5px, 145%);
       color: $main-color;
       background-color: $bc-color;
-      @media (min-width: 1024px) {
-        font-size: 28px;
+      @media (min-width: 1440px) {
+        @include text($second-family, 400, 20px, 145%);
       }
-
+      padding-bottom: 53px;
       color: $white;
+    }
+    button:focus {
+      outline: none;
     }
   }
 }

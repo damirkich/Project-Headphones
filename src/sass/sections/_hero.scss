@@ -39,7 +39,6 @@
         gap: 77px;
         width: fit-content;
       }
-  
 
       &-item-link {
         @include mq(desktop) {
@@ -111,7 +110,6 @@
   @include mq(tablet) {
     right: 0;
   }
-
 
   span {
     width: 26px;
