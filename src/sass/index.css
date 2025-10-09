@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.container {
+  width: 240px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 608px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1020px;
+  }
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"), url("../fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Semibold"), local("Gilroy-Semibold"), url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"), url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+.hero {
+  height: 400px;
+  padding-top: 20px;
+}
+@media (min-width: 768px) {
+  .hero {
+    background-color: purple;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .hero {
+    padding-top: 100px;
+  }
+}
+
+.mibombo {
+  font-family: "Gilroy", sans-serif;
+}
+
+.silence {
+  min-height: 600px;
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
+}
+.silence-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.silence-features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.feature-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.feature p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .silence-features {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+  .feature {
+    width: 40%;
+  }
+}
+@media (min-width: 1024px) {
+  .silence {
+    min-height: 700px;
+  }
+  .silence-title {
+    font-size: 32px;
+  }
+}/*# sourceMappingURL=index.css.map */
