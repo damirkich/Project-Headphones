@@ -21,12 +21,13 @@
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.15.4",
+    "@parcel/packager-raw-url": "^2.16.0",
     "@parcel/transformer-sass": "^2.6.0",
-    "@parcel/transformer-webmanifest": "^2.15.4",
+    "@parcel/transformer-webmanifest": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "scss-reset": "^1.4.6"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
