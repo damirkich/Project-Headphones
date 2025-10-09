@@ -1,24 +1,46 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+// .container {
+//     width: 240px;
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     margin: 0 auto;
+
+//     @include mq(tablet) {
+//         width: 608px;
+
+//     }
+
+//     @include mq(desktop) {
+//         width: 1020px;
+//     }
+// }
+
 .container {
-    width: 240px;
+    width: 320px;
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
 
     @include mq(tablet) {
-        width: 608px;
-
+        width: 648px;
+        padding: 0;
     }
 
     @include mq(desktop) {
-        width: 1020px;
+        width: 1060px;
     }
 }
 
 body {
     background: $background-color;
 }
+
+body {
+    background: $background-color;
+}
+
+
 
 button:hover {
     cursor: pointer;
@@ -32,9 +54,9 @@ button:hover {
         url('../fonts/Gilroy-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Gilroy';
     src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
         url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
@@ -42,4 +64,28 @@ button:hover {
         url('../fonts/Gilroy-Semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+}
+
+  *{
+    box-sizing: border-box;
   }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border:none;
+}
+
+body {
+    background-color: #191919;
+}
