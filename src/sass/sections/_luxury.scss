@@ -17,33 +17,44 @@
 
 .silence-title {
   font-family: $font-family;
-font-weight: 600;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: 0.02em;
-text-transform: uppercase;
-color: #e7e7e7;
-@include mq(tablet) {text-align: right; font-size: 30px; }
-@include mq(mobile) {text-align: right; font-size: 24px; }
-@include mq(desktop) {text-align: right; font-size: 54px; margin-right: -260px;  }
-
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #e7e7e7;
+  @include mq(tablet) {
+    text-align: right;
+    font-size: 30px;
+  }
+  @include mq(mobile) {
+    text-align: right;
+    font-size: 24px;
+  }
+  @include mq(desktop) {
+    text-align: right;
+    font-size: 54px;
+    margin-right: -260px;
+  }
 }
 
-.feature-title{
-font-family: $font-family;
-font-weight: 600;
-line-height: 125%;
-color: #e7e7e7;
-padding-top: 20px;
+.feature-title {
+  font-family: $font-family;
+  font-weight: 600;
+  line-height: 125%;
+  color: #e7e7e7;
+  padding-top: 20px;
 
-
-@include mq(tablet) {font-size: 20px;}
-@include mq(mobile) {font-size: 20px;}
-@include mq(desktop) {font-size: 28px;}
-
+  @include mq(tablet) {
+    font-size: 20px;
+  }
+  @include mq(mobile) {
+    font-size: 20px;
+  }
+  @include mq(desktop) {
+    font-size: 28px;
+  }
 }
-
-
 
 .feature {
   &-title {
@@ -52,18 +63,23 @@ padding-top: 20px;
   }
 }
 
-  p {
-    font-family: $font-family;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 145%;
-    color: rgba(255, 255, 255, 0.8);
-    @include mq(mobile) {font-size: 14px;line-height: 125%; }
-    @include mq(tablet) {font-size: 16px;}
-     @include mq(desktop) {font-size: 20px;}
+p {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 145%;
+  color: rgba(255, 255, 255, 0.8);
+  @include mq(mobile) {
+    font-size: 14px;
+    line-height: 125%;
   }
-
-
+  @include mq(tablet) {
+    font-size: 16px;
+  }
+  @include mq(desktop) {
+    font-size: 20px;
+  }
+}
 
 .silence-image {
   display: block;
@@ -71,17 +87,22 @@ padding-top: 20px;
   width: 100%;
   height: 293px;
   object-fit: cover;
-  @include mq(tablet) { width: 768px; margin-left: -100px; margin-right: -80px;
+  @include mq(mobile) {
+    width: 280px;
   }
-  @include mq(mobile) { width: 280px;}
-  
-  @include mq(desktop) { width: 1510px; height: 524px; margin-left: -415px; margin-right: -415px;}
+  @include mq(tablet) {
+    width: 768px;
+    margin-left: -100px;
+    margin-right: -100px;
+  }
 
-
+  @include mq(desktop) {
+    width: 1510px;
+    height: 524px;
+    margin-left: -415px;
+    margin-right: -415px;
+  }
 }
-
-
-  
 
 @media (min-width: 768px) {
   .silence-features {
@@ -94,7 +115,3 @@ padding-top: 20px;
     flex: 1;
   }
 }
-
-
-
-
