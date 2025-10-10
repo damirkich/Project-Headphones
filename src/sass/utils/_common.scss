@@ -16,6 +16,10 @@
 //     }
 // }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 320px;
     padding-left: 20px;
@@ -42,6 +46,23 @@ body {
 
 
 
+button:hover {
+    cursor: pointer;
+}
+
+body {
+    background: $background-color;
+}
+
+body {
+    background: $background-color;
+}
+
+
+
+button:hover {
+    cursor: pointer;
+}
 @font-face {
     font-family: 'Gilroy';
     src: local('Gilroy Regular'), local('Gilroy-Regular'),

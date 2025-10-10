@@ -1,0 +1,221 @@
+.nc {
+  @include section-padding(52px, 100px, 170px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  .container {
+    min-width: 280px;
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    @include mq(tablet) {
+      min-width: 651px;
+    }
+    @include mq(desktop) {
+      margin-left: 187px;
+      min-width: 1253px;
+    }
+  }
+  &__content {
+    @include mq(desktop) {
+      width: 400px;
+    }
+  }
+  &__title {
+    @include section-title(600, 24px, 30px, 54px);
+  }
+  &__title--red {
+    @include section-title(600, 24px, 30px, 54px);
+    color: #df3d3a;
+    padding-bottom: 24px;
+    padding-top: 32px;
+    @include mq(tablet) {
+      padding-bottom: 32px;
+      padding-top: 52px;
+    }
+    @include mq(desktop) {
+      padding-bottom: 32px;
+      padding-top: 50px;
+    }
+  }
+  &__wrapper {
+    min-width: 280px;
+    min-height: 265px;
+    @include mq(tablet) {
+      min-width: 648px;
+      min-height: 446px;
+    }
+    @include mq(desktop) {
+      min-width: 700px;
+      min-height: 664px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &__image {
+    display: min-block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  .white {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  &__button--order {
+    @include text-style(600, 16px, 20px, 20px);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    background: #df3d3a;
+    padding: 19px 0;
+    width: 100%;
+    border: 0;
+    transition: 0.3s;
+    @include mq(tablet) {
+      padding: 17px 0;
+      width: 294px;
+    }
+    @include mq(desktop) {
+      padding: 22px 0;
+      width: 400px;
+    }
+  }
+  &__button--order:hover {
+    background: #b5302d;
+  }
+  &__link {
+    @include text-style(400, 16px, 16px, 16px);
+    text-decoration: none;
+    color: $description-color;
+    margin: 26px 0 25px 0;
+    display: inline-block;
+  }
+  &__line {
+    display: inline-block;
+    border: 1px solid $description-color;
+    width: 280px;
+    height: 0px;
+    transform: rotate(-180deg);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    @include mq(tablet) {
+      width: 648px;
+    }
+    @include mq(desktop) {
+      width: 400px;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    position: relative;
+  }
+  &__item svg {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    bottom: 25px;
+  }
+  &__list--button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 32px 0;
+    align-items: center;
+    @include mq(tablet) {
+      padding: 32px 0 40px;
+    }
+    @include mq(desktop) {
+      padding: 0 0 50px;
+    }
+  }
+  &__button {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: #1d1d1d;
+    border: 1px solid $description-color;
+    padding: 0;
+    position: relative;
+    @include mq(tablet) {
+      width: 58px;
+      height: 58px;
+    }
+    @include mq(desktop) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  &__button div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #000;
+    transition: 0.3s;
+    @include mq(tablet) {
+      width: 42px;
+      height: 42px;
+    }
+    @include mq(desktop) {
+      width: 54px;
+      height: 54px;
+    }
+  }
+  &__button:hover div {
+    border: 2px solid #df3d3a;
+  }
+  &__button--white {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    background-color: $description-color;
+    border: 1px solid $description-color;
+    padding: 0;
+    position: relative;
+    @include mq(tablet) {
+      width: 58px;
+      height: 58px;
+    }
+    @include mq(desktop) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  &__button--white div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: $description-color;
+    transition: 0.3s;
+    @include mq(tablet) {
+      width: 42px;
+      height: 42px;
+    }
+    @include mq(desktop) {
+      width: 54px;
+      height: 54px;
+    }
+  }
+  &__button--white:hover div {
+    border: 2px solid #df3d3a;
+  }
+}
