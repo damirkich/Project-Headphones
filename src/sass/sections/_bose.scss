@@ -1,0 +1,78 @@
+.bose {
+  @include section-padding(52px, 100px, 170px);
+  display: flex;
+  justify-content: center;
+  & .container {
+    position: relative;
+    min-width: 280px;
+    padding: 0;
+    margin: 0 20px;
+    height: 495px;
+    @include mq(tablet) {
+      display: flex;
+      flex-direction: row;
+      min-width: 708px;
+      height: 297px;
+      margin-left: 60px;
+      margin-right: 0;
+      gap: 60px;
+    }
+    @include mq(desktop) {
+      margin-left: 190px;
+      min-width: 1250px;
+      height: 586px;
+      gap: 170px;
+    }
+  }
+  &__title {
+    @include section-title(600, 24px, 30px, 54px);
+  }
+  &__subtitle {
+    @include section-subtitle;
+    @include mq(desktop) {
+      padding-bottom: 20px;
+    }
+  }
+  &__desc {
+    @include text-style(400, 14px, 16px, 20px);
+    color: $description-color;
+    padding-bottom: 32px;
+    margin: 0;
+    @include mq(tablet) {
+      width: 285px;
+    }
+    @include mq(desktop) {
+      width: 350px;
+    }
+  }
+  &__text {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    @include mq(tablet) {
+      width: 294px;
+    }
+    @include mq(desktop) {
+      width: 380px;
+    }
+  }
+  &__wraper {
+    margin: 0 auto;
+    min-width: 280px;
+    height: 253px;
+    @include mq(tablet) {
+      min-width: 354px;
+      min-height: 297px;
+    }
+    @include mq(desktop) {
+      min-width: 700px;
+      min-height: 586px;
+    }
+  }
+  &__image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}

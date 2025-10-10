@@ -5,7 +5,7 @@
   "homepage": "https://goitacademy.github.io/parcel-project-template",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url ./"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,8 @@
     "@parcel/transformer-sass": "^2.6.0",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "scss-reset": "^1.4.6"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }

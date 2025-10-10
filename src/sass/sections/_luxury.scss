@@ -1,7 +1,7 @@
 .silence {
   overflow: hidden;
   background-color: #191919;
-  padding: 40px 0px;
+  @include section-padding(52px, 100px, 170px);
 
   &-title {
     font-size: 28px;
@@ -34,7 +34,7 @@
   @include mq(desktop) {
     text-align: right;
     font-size: 54px;
-    margin-right: -260px;
+    margin-right: 0;
   }
 }
 
@@ -92,15 +92,17 @@ p {
   }
   @include mq(tablet) {
     width: 768px;
-    margin-left: -100px;
-    margin-right: -100px;
+    max-width: 768px;
+    margin-left: -60px;
+    margin-right: -60px;
   }
 
   @include mq(desktop) {
-    width: 1510px;
+    width: 1440px;
+    max-width: 1440px;
     height: 524px;
-    margin-left: -415px;
-    margin-right: -415px;
+    margin-left: -190px;
+    margin-right: -190px;
   }
 }
 

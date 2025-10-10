@@ -1,0 +1,148 @@
+.brand {
+  @include section-padding(52px, 100px, 170px);
+  display: flex;
+  justify-content: center;
+  & .container {
+    position: relative;
+    min-width: 280px;
+    padding: 0;
+    margin: 0 20px;
+    height: 1301px;
+    @include mq(tablet) {
+      min-width: 708px;
+      margin-left: 60px;
+      margin-right: 0;
+      height: 999px;
+    }
+    @include mq(desktop) {
+      margin-left: 190px;
+      min-width: 1250px;
+      height: 1113px;
+    }
+  }
+  &__title {
+    @include section-title(600, 24px, 30px, 54px);
+    padding-bottom: 0;
+    width: 155px;
+  }
+  &__subtitle {
+    @include section-subtitle;
+    @include mq(tablet) {
+      padding-bottom: 32px;
+    }
+  }
+  &__picture {
+    min-width: 280px;
+    min-height: 251px;
+    @include mq(tablet) {
+      min-width: 354px;
+      min-height: 524px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    @include mq(desktop) {
+      min-width: 700px;
+      min-height: 628px;
+    }
+  }
+  &__image, &__image--camera {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  &__picture--camera {
+    width: 280px;
+    height: 343px;
+    @include mq(tablet) {
+      width: 294px;
+      height: 355px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    @include mq(desktop) {
+      width: 290px;
+      height: 355px;
+    }
+  }
+  &__picture,
+  &__picture--camera {
+    margin-top: 32px;
+    @include mq(tablet) {
+      margin-top: 0;
+    }
+  }
+  &__desc {
+    margin: 0;
+    padding-top: 32px;
+    @include text-style(400, 14px, 16px, 20px);
+    color: $description-color;
+    @include mq(tablet) {
+      width: 294px;
+      line-height: 145%;
+    }
+    @include mq(desktop) {
+      width: 395px;
+    }
+    &--three {
+      @include mq(tablet) {
+        position: absolute;
+        right: 85px;
+        top: 525px;
+        width: 270px;
+      }
+      @include mq(desktop) {
+        width: 510px;
+        padding-top: 50px;
+        right: 190px;
+        top: 628px;
+      }
+    }
+  }
+  &__title + &__desc {
+    @include mq(desktop) {
+      padding-top: 0;
+    }
+  }
+  &__picture + &__desc {
+    @include mq(tablet) {
+      padding-top: 85px;
+    }
+    @include mq(desktop) {
+      padding-top: 74px;
+    }
+  }
+  &__picture--camera + div {
+    @include mq(tablet) {
+      width: 296px;
+      height: 195px;
+      position: absolute;
+      right: 60px;
+      bottom: 15px;
+    }
+    @include mq(desktop) {
+      width: 382px;
+      height: 223px;
+      right: 318px;
+      bottom: 22px;
+    }
+  }
+  &__quote {
+    padding-top: 32px;
+    padding-bottom: 24px;
+    @include mq(tablet) {
+      padding-top: 0;
+      padding-bottom: 52px;
+    }
+    @include mq(desktop) {
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
+  }
+  &__subtitle + &__desc {
+    color: rgba(255, 255, 255, 0.4);
+    padding-top: 0;
+  }
+}
