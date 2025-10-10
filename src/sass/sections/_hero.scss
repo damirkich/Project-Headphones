@@ -96,6 +96,7 @@
   z-index: 1000;
   top: 10px;
   transition: 0.5s ease;
+
   position: absolute;
   flex-direction: column;
   gap: 3px;
@@ -154,6 +155,7 @@
 }
 
 .hero {
+  overflow: hidden;
   &__info {
     margin-top: 32px;
 
